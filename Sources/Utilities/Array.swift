@@ -11,3 +11,12 @@ extension Array where Element: Numeric {
         return self.reduce(0, +)
     }
 }
+
+
+extension Array {
+    public func removing(at index: Int) -> Self {
+        var copy = self
+        copy.remove(at: index)
+        return copy
+    }
+}
