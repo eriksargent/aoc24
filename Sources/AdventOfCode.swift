@@ -67,12 +67,13 @@ struct AdventOfCode: AsyncParsableCommand {
             }
             
             print("\n\n")
+            print("--- Begin Timings ---")
             print("|Day|Part 1|Part 2|")
             print("|---|------|------|")
             for (day, timing1, timing2) in allTimings {
                 print("|\(day)|\(timing1)|\(timing2)|")
             }
-            
+            print("--- End Timings ---")
             print("\n\n")
         }
         else {

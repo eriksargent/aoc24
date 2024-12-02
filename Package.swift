@@ -42,7 +42,14 @@ let package = Package(
                     .writeToPackageDirectory(reason: "Adds the next AOC day to the local package")
                 ]),
             dependencies: []
-        )
+        ),
+        .plugin(name: "Benchmark", capability: .command(
+            intent: .custom(verb: "benchmark", description: "Run benchmarks for the AOC days"),
+            permissions: [
+                .writeToPackageDirectory(reason: "Updates readme with the new benchmarks")
+            ]),
+            dependencies: []
+        ),
     ],
     swiftLanguageModes: [.v6]
 )
